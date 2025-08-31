@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Triple Corona</title>
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav> <!-- Navegación Principal -->
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+                <li><a href="torneos.html">Torneos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html" aria-current="page" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <p>Por cualquier consulta, completa el formulario:</p>
+
+        <!-- Voy creando mi formulario. -->
+        <form action="#" method="post" class="form-contacto">
+            <div class="campo">
+                <label for="nombre">Nombre completo:</label>
+                <!-- Obligatorio -->
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Mail:</label>
+                <!-- Obligatorio -->
+                <input type="email" id="email" name="email" placeholder="Ej: ejemplo@correo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <!-- Obligatorio -->
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
