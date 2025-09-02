@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Torneos - Triple Corona</title>
 
-  <!-- Bootstrap  -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Tu hoja de estilos -->
@@ -13,48 +13,81 @@
 </head>
 
 <body>
-  <header class="bg-primary text-white py-3">
+  <!-- Header / Menú -->
+  <header class="bg-blue text-white py-3">
     <nav class="container">
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
         <li class="nav-item"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
-        <li class="nav-item"><a href="torneos.html" class="nav-link active fw-bold">Torneos</a></li>
+        <li class="nav-item"><a href="torneos.html" class="nav-link active fw-bold text-warning">Torneos</a></li>
         <li class="nav-item"><a href="noticias.html" class="nav-link text-white">Noticias</a></li>
         <li class="nav-item"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container mt-2 mb-4 text-center">
-    <h1 class="mb-4 text-primary">Torneos de la Triple Corona</h1>
+  <!-- Main -->
+  <main class="container mt-1 mb-5">
+    <h1 class="text-center mb-5" style="color: #004080; font-weight: bold;">Torneos de la Triple Corona</h1>
+
 
     <div class="row g-4 justify-content-center">
-      <div class="col-12 col-md-4">
+
+      <!-- Abierto de Tortugas -->
+      <div class="col-12 mb-4">
         <div class="card shadow-sm h-100">
-          <div class="card-body d-flex align-items-center justify-content-center">
-            <h5 class="card-title fw-bold">Abierto de Tortugas</h5>
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="../assets/img/canchaPoloTortugas.jpg" class="img-fluid h-100" alt="Abierto de Tortugas">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center p-3">
+              <h5 class="card-title fw-bold">Abierto de Tortugas</h5>
+              <p class="card-text">
+                El Abierto de Tortugas es uno de los tres torneos que componen la Triple Corona del Polo Argentino, un circuito de certámenes de alto handicap que se juega anualmente en Argentina. Se disputa en las canchas del Tortugas Country Club, en Tortuguitas, y es el primer torneo del año de la Triple Corona, sirviendo como antesala del Abierto de Hurlingham y el prestigioso Abierto de Palermo.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-md-4">
+      <!-- Abierto de Hurlingham -->
+      <div class="col-12 mb-4">
         <div class="card shadow-sm h-100">
-          <div class="card-body d-flex align-items-center justify-content-center">
-            <h5 class="card-title fw-bold">Abierto de Hurlingham</h5>
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="../assets/img/canchaHurlingham.jpg" class="img-fluid h-100" alt="Abierto de Hurlingham">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center p-3">
+              <h5 class="card-title fw-bold">Abierto de Hurlingham</h5>
+              <p class="card-text">
+                El Abierto de Hurlingham es un prestigioso torneo de polo que se juega en Argentina desde 1893 y es el más antiguo del mundo. Es la segunda gema de la Triple Corona de Polo Argentino, junto con el Abierto de Tortugas y el Abierto de Palermo. Se disputa en las canchas del Hurlingham Club y otorga la Copa Ayrshire al equipo campeón.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-md-4">
+      <!-- Abierto de Palermo -->
+      <div class="col-12 mb-4">
         <div class="card shadow-sm h-100">
-          <div class="card-body d-flex align-items-center justify-content-center">
-            <h5 class="card-title fw-bold">Abierto de Palermo</h5>
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="../assets/img/canchaPalermo.jpg" class="img-fluid h-100" alt="Abierto de Palermo">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center p-3">
+              <h5 class="card-title fw-bold">Abierto de Palermo</h5>
+              <p class="card-text">
+                El Abierto de Polo de Palermo, o Campeonato Argentino Abierto de Polo, es el torneo de polo más importante del mundo y el cierre de la Triple Corona del polo argentino. Se celebra anualmente en el Campo Argentino de Polo, ubicado en el barrio de Palermo, Buenos Aires, y reúne a los mejores jugadores y equipos internacionales para competir por el título.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-primary text-white text-center py-3 mt-5">
     <p>&copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.</p>
   </footer>
