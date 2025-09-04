@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 /* Estilos generales */
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -21,6 +20,18 @@ header {
     padding: 20px 0;
     text-align: center;
 }
+
+/* Abrir dropdown al pasar el mouse */
+@media (hover: hover) and (pointer: fine) {
+    .nav .dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  /* Evita "salto" visual al abrir */
+  .dropdown-menu {
+    margin-top: 0;
+  }
 
 header h1 {
     margin-bottom: 10px;
@@ -161,25 +172,6 @@ footer {
 .nav-link.active {
     color: #d9ff00 !important; 
 }
-/*
-.torneos-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.torneo {
-    border: 2px solid #000;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    text-align: center;
-    background-color: #f9f9f9;
-}*/
 
 /* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE NOTICIAS ----------------------------------- */
 
@@ -201,9 +193,6 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-
-
 
 /* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE EQUIPOS ----------------------------------- */
 .equipos-container {
