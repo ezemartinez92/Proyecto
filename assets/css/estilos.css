@@ -162,30 +162,19 @@ footer {
 }
 
 /* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE NOTICIAS ----------------------------------- */
+.no-hover:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
 
 .noticias-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 40px;
+    background: linear-gradient(180deg, #c5c7c5 0%, #f2f6fc 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(21, 71, 100, 0.08);
+    padding: 25px;
+    text-align: center; 
 }
 
-.noticia {
-    border: 2px solid #000;
-    background-color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    height: 200px; /* opcional, ajustable según contenido */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.noticia iframe {
-    width: 100%;
-    height: 315px;
-    border: none;
-  }
 /* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE EQUIPOS ----------------------------------- */
 .equipos-container {
     display: grid;
