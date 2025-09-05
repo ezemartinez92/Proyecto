@@ -21,18 +21,6 @@ header {
     text-align: center;
 }
 
-/* Abrir dropdown al pasar el mouse */
-@media (hover: hover) and (pointer: fine) {
-    .nav .dropdown:hover > .dropdown-menu {
-      display: block;
-    }
-  }
-  
-  /* Evita "salto" visual al abrir */
-  .dropdown-menu {
-    margin-top: 0;
-  }
-
 header h1 {
     margin-bottom: 10px;
     font-size: 2rem;
@@ -193,7 +181,11 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
+.noticia iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+  }
 /* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE EQUIPOS ----------------------------------- */
 .equipos-container {
     display: grid;

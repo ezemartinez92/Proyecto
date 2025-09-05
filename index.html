@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
- <!-- Bootstrap CSS -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
- <!-- Estilos mios -->
- <link rel="stylesheet" href="assets/css/estilos.css">
-</head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Iconos para linkedin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Estilos míos -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head><!-- Termina el Head -->
 
 <body>
    <!-- Header/Menú -->
@@ -21,42 +23,17 @@
         <li class="nav-item"><a href="pages/torneos.html" class="nav-link text-white">Torneos</a></li>
         <li class="nav-item"><a href="pages/noticias.html" class="nav-link text-white">Noticias</a></li>
         <li class="nav-item"><a href="pages/contacto.html" class="nav-link text-white">Contacto</a></li>
-
-        <!-- Dropdown Mio. Aca hago un menú desplegable a mi pagina de Linkedin pero solo en el index-->
-        <li class="nav-item dropdown position-static">
-          <a class="nav-link text-white dropdown-toggle"
-             href="#"
-             id="redesDropdown"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-            Página del creador
-          </a>
-          <ul class="dropdown-menu shadow border-0 p-2" aria-labelledby="redesDropdown">
-            <li>
-              <a class="dropdown-item d-flex align-items-center gap-2"
-                 href="https://www.linkedin.com/in/ezemartinez92/"
-                 target="_blank" rel="noopener">
-                <!-- Acá trabajo con el logo de Linkedin en base a Copilot -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.763 0 5-2.24 5-5v-14c0-2.76-2.237-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.058-1.863-3.058-1.864 0-2.149 1.454-2.149 2.957v5.705h-3v-10h2.882v1.367h.041c.401-.758 1.381-1.558 2.842-1.558 3.04 0 3.6 2.002 3.6 4.607v5.584z"/>
-                </svg>
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </li>
       </ul>
     </nav>
   </header>
-     <!-- Empieza -->
+
+   <!-- Empieza el main-->
     <main>
         <h1 class="text-center mb-4" style="color: #004080; font-weight: bold;">Bienvenidos a la página oficial de la Triple Corona</h1>
         <section>   
             <p>
                 Este sitio ofrece información sobre los equipos, torneos y noticias del polo argentino.
             </p>
-
             <p>
                 La Triple Corona es una serie de torneos de polo que se celebran anualmente en Argentina, incluyendo el Abierto de Hurlingham, el Abierto de Palermo y el Abierto de Tortugas.
             </p>
@@ -65,15 +42,20 @@
         <section>
             <img src="assets/img/AdolfoCambiaso.jpg" alt="Imagen de Polo" width="600" height="350">
         </section>
-
     </main>
 
+    <!-- Empieza el footer -->
     <footer class="bg-blue text-white text-center py-3 mt-5">
-      <p>&copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.</p>
-    </footer>
+      <p class="mb-0">
+        &copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.
+        <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
+          <i class="bi bi-linkedin" style="font-size: 1.5rem; vertical-align: middle;"></i>
+        </a>
+      </p>
+    </footer> <!-- Termina el footer -->
 
- <!-- Bootstrap JS -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
