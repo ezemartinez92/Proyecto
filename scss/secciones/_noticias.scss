@@ -1,0 +1,14 @@
+@use '../generales/variables' as variables;
+
+.no-hover:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .noticias-container {
+    background: variables.$noticias-background;
+    border-radius: variables.$noticias-border-radius;
+    box-shadow: variables.$noticias-box-shadow;
+    padding: variables.$noticias-padding;
+    text-align: variables.$noticias-text-align;
+  }

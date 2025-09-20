@@ -1,0 +1,155 @@
+@use 'variables' as variables;
+
+//Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Estilos Titulo Principal
+.titulo-principal {
+  color: variables.$titulo-principal-color;
+  font-weight: variables.$titulo-principal-font-weight;
+  font-size: variables.$titulo-principal-font-size;
+  text-align: variables.$titulo-principal-text-align;
+  margin-bottom: variables.$titulo-principal-margin-bottom;
+  margin-top: variables.$titulo-principal-margin-top;
+  
+}
+
+//Estilos Menu Slide	
+#menuSlide {
+  width: 250px;
+  max-height: 70vh;
+  top: 15vh;
+  border-radius: variables.$menu-border-radius;
+  height: auto;
+  background-color: variables.$menu-bg;
+  padding: 0;
+  box-shadow: variables.$menu-box-shadow;
+
+  .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      color: variables.$menu-hover-color;
+      background-color: variables.$menu-hover-bg;
+      transform: scale(1.05);
+      border-radius: variables.$menu-item-radius;
+    }
+  }
+}
+
+// Estilos Header y Barra de Navegación
+header {
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0;
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #5cb2e4;
+          }
+        }
+      }
+    }
+
+    .nav-link {
+      color: white;                 
+      text-decoration: none;          
+      padding: 0.25rem 0.5rem;      
+      border-radius: 0.25rem;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+      }
+    }
+  }
+}
+
+.bg-blue {
+  background-color: variables.$header-bg-color;
+  color: variables.$header-text-color;
+}
+
+//Medias Queries
+@media (max-width: 900px) {
+  .equipos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .equipos-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+    #menuSlide {
+      width: 90%;      
+      height: 90%;     
+      top: 5%;       
+      border-radius: 0;
+    }
+  }
+
+//Otros estilos globales
+.offcanvas-backdrop {
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+
+ main {
+  padding: 40px 20px;
+  text-align: center;
+
+  section {
+    &:nth-of-type(1) {
+      margin-top: 1px;
+      margin-bottom: 20px;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+

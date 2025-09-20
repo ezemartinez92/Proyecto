@@ -1,0 +1,11 @@
+@use '../generales/variables' as variables;
+
+.card {
+    border-radius: variables.$torneos-border-radius;
+    transition: variables.$torneos-transition;
+  
+    &:hover {
+      transform: variables.$torneos-transform;
+      box-shadow: variables.$torneos-box-shadow;
+    }
+  }

@@ -9,30 +9,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Iconos para linkedin -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Estilops mios -->
+    <!-- Estilos míos -->
     <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 
 <body>
   
-  <header class="bg-blue text-white py-3">
-    <nav class="container">
-      <ul class="nav justify-content-center">
-        <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
-        <li class="nav-item"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
-        <li class="nav-item"><a href="torneos.html" class="nav-link text-white">Torneos</a></li>
-        <li class="nav-item"><a href="noticias.html" class="nav-link active fw-bold text-warning">Noticias</a></li>
-        <li class="nav-item"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
+  <header class="bg-blue py-2">
+    <nav class="container d-flex align-items-center justify-content-between">
+      <!-- Botón hamburguesa (siempre visible) -->
+      <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
+        <i class="bi bi-list" style="font-size: 2rem;"></i>
+      </button>
+  
+      <!-- Navbar horizontal (solo escritorio), centrado -->
+      <ul class="nav d-none d-lg-flex justify-content-center flex-grow-1">
+        <li class="nav-item mx-3"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+        <li class="nav-item mx-3"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
+        <li class="nav-item mx-3"><a href="torneos.html" class="nav-link text-white">Torneos</a></li>
+        <li class="nav-item mx-3"><a href="noticias.html" class="nav-link text-white">Noticias</a></li>
+        <li class="nav-item mx-3"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
       </ul>
+  
+      <!-- Menú Offcanvas -->
+      <div class="offcanvas offcanvas-start text-white bg-blue" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel">
+        <div class="offcanvas-header border-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-start p-2 pt-0">
+          <ul class="nav flex-column text-center mt-2">
+            <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white py-2">Inicio</a></li>
+            <li class="nav-item mb-2"><a href="equipos.html" class="nav-link text-white py-2">Equipos</a></li>
+            <li class="nav-item mb-2"><a href="torneos.html" class="nav-link text-white py-2">Torneos</a></li>
+            <li class="nav-item mb-2"><a href="noticias.html" class="nav-link text-white py-2">Noticias</a></li>
+            <li class="nav-item mb-2"><a href="contacto.html" class="nav-link text-white py-2">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
 
   <main>
-    <h1 class="text-center mb-4" style="color: #004080; font-weight: bold;"> Noticias y Videos de Polo </h1>
+    <h1 class="text-center mb-4 titulo-principal">
+     Videos y Fixture
+    </h1>
+    <section>   
+      <p>
+          En esta sección encontrarás videos destacados de los torneos de la Triple Corona y Fixture de Partidos.
+      </p>
+  </section>
     <!-- Aca Inserto los videos de Youtube-->
     <section class="container">
       <div class="row g-4">
+        
         <!-- Noticia 1 -->
         <div class="col-md-4">
           <div class="card no-hover">
@@ -81,11 +111,73 @@
           </div>
         </div>
 
-        <div class="noticias-container">Noticia 4 " En Construcción"</div>
-        <div class="noticias-container">Noticia 5 " En Construcción"</div>
-        <div class="noticias-container">Noticia 6 " En Consturcción"</div>
+     <!-- Noticia 4 (Fixture) -->
+      <div class="col-md-4">
+        <div class="card border-primary shadow-sm bg-light">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-primary mb-3">
+              <i class="bi bi-calendar-event me-2"></i>Fixture Abierto de Tortugas 2025
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">📅 <strong>Fecha 1:</strong> Martes 7/10 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 2:</strong> Miércoles 8/10 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 3:</strong> Sábado 11/10 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 4:</strong> Domingo 12/10 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">🏆 <strong>Semifinal 1:</strong> Sábado 18/10 - 16:00hs</li>
+              <li class="list-group-item">🏆 <strong>Semifinal 2:</strong> Domingo 19/10 - 16:00hs</li>
+              <li class="list-group-item text-danger fw-bold">🥇 <strong>Final:</strong> Sábado 25/10 - 16:00hs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        
+
+      <!-- Noticia 5 (Fixture) -->
+      <div class="col-md-4">
+        <div class="card border-primary shadow-sm bg-light">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-primary mb-3">
+              <i class="bi bi-calendar-event me-2"></i>Fixture Abierto de Hurlingham 2025
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">📅 <strong>Fecha 1:</strong> Martes 23/09 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 2:</strong> Miércoles 24/9 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">📅 <strong>Semifinal 1:</strong> Sábado 27/09 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">📅 <strong>Semifinal 2:</strong> Domingo 28/09 - 13:30hs y 16:00hs</li>
+              <li class="list-group-item">🏆 <strong>Final Subsidiaria:</strong> Viernes 03/10 - 16:00hs</li>
+              <li class="list-group-item text-danger fw-bold">🥇 <strong>Final:</strong> Sábado 04/10 - 16:00hs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 6 (Fixture) -->
+      <div class="col-md-4">
+        <div class="card border-primary shadow-sm bg-light">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-primary mb-3">
+              <i class="bi bi-calendar-event me-2"></i>Fixture Abierto de Palermo 2025
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">📅 <strong>Fecha 1:</strong> Viernes 31/10 - 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 1 y 2:</strong> Sábado 01/11 - 14:00hs y 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 2:</strong> Domingo 02/11 - 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 3:</strong> Viernes 07/11 - 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 3 y 4:</strong> Sábado 08/11 - 14:00hs y 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 4:</strong> Domingo 09/11 - 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 5:</strong> Viernes 14/11 - 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 5 y 6:</strong> Sábado 15/11 - 14:00hs y 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 6:</strong> Domingo 16/11 - 14:00hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 7:</strong> Sábado 22/11 - 14:00hs y 16:30hs</li>
+              <li class="list-group-item">📅 <strong>Fecha 8:</strong> Sábado 22/11 - 14:00hs</li>
+              <li class="list-group-item">🏆 <strong>Finales de Zona:</strong> Sábado 29/11 - 14:00hs y 16:30hs</li>
+              <li class="list-group-item">🏆<strong>Finales de Zona:</strong> Domingo 30/11 - 14:00hs y 16:30hs</li>
+              <li class="list-group-item text-danger fw-bold">🥇 <strong>Final:</strong> Sábado 06/12 - 16:00hs</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
   </main>

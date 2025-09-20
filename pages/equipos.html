@@ -14,21 +14,44 @@
 </head>
 
 <body>
- <!-- Header / Menú -->
- <header class="bg-blue text-white py-3">
-    <nav class="container">
-      <ul class="nav justify-content-center">
-        <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
-        <li class="nav-item"><a href="equipos.html" class="nav-link active fw-bold text-warning">Equipos</a></li>
-        <li class="nav-item"><a href="torneos.html" class="nav-link text-white">Torneos</a></li>
-        <li class="nav-item"><a href="noticias.html" class="nav-link text-white">Noticias</a></li>
-        <li class="nav-item"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
-      </ul>
-    </nav>
- </header>
+    <header class="bg-blue py-2">
+        <nav class="container d-flex align-items-center justify-content-between">
+          <!-- Botón hamburguesa (siempre visible) -->
+          <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
+            <i class="bi bi-list" style="font-size: 2rem;"></i>
+          </button>
+      
+          <!-- Menú Principal -->
+          <ul class="nav d-none d-lg-flex justify-content-center flex-grow-1">
+            <li class="nav-item mx-3"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+            <li class="nav-item mx-3"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
+            <li class="nav-item mx-3"><a href="torneos.html" class="nav-link text-white">Torneos</a></li>
+            <li class="nav-item mx-3"><a href="noticias.html" class="nav-link text-white">Noticias</a></li>
+            <li class="nav-item mx-3"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
+          </ul>
+      
+          <!-- Menú Offcanvas -->
+          <div class="offcanvas offcanvas-start text-white bg-blue" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel">
+            <div class="offcanvas-header border-0">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-start p-2 pt-0">
+              <ul class="nav flex-column text-center mt-2">
+                <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white py-2">Inicio</a></li>
+                <li class="nav-item mb-2"><a href="equipos.html" class="nav-link text-white py-2">Equipos</a></li>
+                <li class="nav-item mb-2"><a href="torneos.html" class="nav-link text-white py-2">Torneos</a></li>
+                <li class="nav-item mb-2"><a href="noticias.html" class="nav-link text-white py-2">Noticias</a></li>
+                <li class="nav-item mb-2"><a href="contacto.html" class="nav-link text-white py-2">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 
     <main>
-        <h1 class="text-center mb-4" style="color: #004080; font-weight: bold;">Equipos de la Triple Corona</h1>
+        <h1 class="text-center mb-4 titulo-principal">
+           Equipos de la Triple Corona
+          </h1>
         <section>
             <p>En esta sección encontrarás información sobre los principales equipos que participan en los torneos de la Triple Corona de polo.</p>
         </section>

@@ -1,261 +1,258 @@
-/*reset css*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilos generales */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+.titulo-principal {
+  color: #004080;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
-/* Encabezado */
-header {
-    background-color: #003366;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+#menuSlide {
+  width: 250px;
+  max-height: 70vh;
+  top: 15vh;
+  border-radius: 0.5rem;
+  height: auto;
+  background-color: #003366;
+  padding: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+#menuSlide .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+#menuSlide .nav-item {
+  margin-bottom: 0.5rem;
+}
+#menuSlide .nav-link {
+  color: white !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+#menuSlide .nav-link:hover {
+  color: #ffd700;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  border-radius: 5px;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2rem;
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #5cb2e4;
+}
+header nav .nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+header nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0;
+.bg-blue {
+  background-color: #003366 !important;
+  color: white !important;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+@media (max-width: 900px) {
+  .equipos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .equipos-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  #menuSlide {
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    border-radius: 0;
+  }
+}
+.offcanvas-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* Contenido principal */
 main {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* Para mis H1*/
-main h1 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #070066;
-}
-
-/* Para mis H2*/
-main h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #003366;
-    text-decoration: underline;
-}
-
-/* Ajusto los márgenes */
-h2.bienvenida{
-    margin-top: 0px
+  padding: 40px 20px;
+  text-align: center;
 }
 main section:nth-of-type(1) {
-    margin-top: 1px;
+  margin-top: 1px;
+  margin-bottom: 20px;
 }
 main section:nth-of-type(2) {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-section p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: auto;
-}
-
-/* Pie de página */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+main section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
 }
 
-/* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE CONTACTOS ----------------------------------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.equipos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px;
+}
+.equipos-container .equipo {
+  background: linear-gradient(180deg, #c5c7c5 0%, #f2f6fc 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-left: 8px solid transparent;
+}
+.equipos-container .equipo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.equipos-container .equipo > strong {
+  display: block;
+  color: #0077cc;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #d1e3f0;
+  padding-bottom: 6px;
+  text-align: center;
+}
+.equipos-container .equipo ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+}
+.equipos-container .equipo .total {
+  font-weight: bold;
+  font-size: 1.15rem;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+.equipos-container .equipo .total.verde {
+  color: #155724;
+  background-color: #d4edda;
+  border-left-color: #28a745;
+}
+.equipos-container .equipo .total.naranja {
+  color: #856404;
+  background-color: #fff3cd;
+  border-left-color: #ff9800;
+}
+.equipos-container .equipo .total.rojo {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-left-color: #d32f2f;
+}
+
 .form-contacto {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .form-contacto .campo {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
-
 .form-contacto label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
 }
-
 .form-contacto input,
 .form-contacto textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
-
 .form-contacto input:focus,
 .form-contacto textarea:focus {
-    border-color: #0077cc;
-    outline: none;
+  border-color: #0077cc;
+  outline: none;
 }
 
 .btn-enviar {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #0077cc;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-
 .btn-enviar:hover {
-    background: #005fa3;
+  background: #005fa3;
 }
-
-/* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE TORNEOS ----------------------------------- */
 
 .card {
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(2, 34, 141, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(2, 34, 141, 0.15);
 }
 
-.nav-link.active {
-    color: #d9ff00 !important; 
-}
-
-/* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE NOTICIAS ----------------------------------- */
 .no-hover:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
+  transform: none !important;
+  box-shadow: none !important;
+}
 
 .noticias-container {
-    background: linear-gradient(180deg, #c5c7c5 0%, #f2f6fc 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(21, 71, 100, 0.08);
-    padding: 25px;
-    text-align: center; 
+  background: linear-gradient(180deg, #c5c7c5 0%, #f2f6fc 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(21, 71, 100, 0.08);
+  padding: 25px;
+  text-align: center;
 }
 
-/* ----------------------------------------------- ESTILOS PARA LA PÁGINA DE EQUIPOS ----------------------------------- */
-.equipos-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 40px;
-}
-
-.equipos-container .equipo {
-    background: linear-gradient(180deg, #c5c7c5 0%, #f2f6fc 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 25px;
-    text-align: center; /* centra todo dentro de la tarjeta */
-    transition: all 0.3s ease; /*efecto bloom*/
-    border-left: 8px solid transparent;
-}
-
-.equipos-container .equipo:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Nombre del equipo */
-.equipos-container .equipo > strong {
-    display: block;
-    color: #0077cc;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-    border-bottom: 1px solid #d1e3f0;
-    padding-bottom: 6px;
-    text-align: center;
-}
-
-/* Lista de jugadores centrados y en negrita */
-.equipos-container .equipo ul li {
-    margin-bottom: 8px;
-    font-size: 1rem;
-    line-height: 1.5;
-    list-style: none;
-    text-align: center; /* centra los nombres */
-    font-weight: bold; /* hace los nombres en negrita */
-}
-
-.equipos-container .equipo ul li {
-    margin-bottom: 8px;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* Totales centrados y con colores */
-.equipos-container .total {
-    font-weight: bold;
-    font-size: 1.15rem;
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 6px;
-    text-align: center;
-}
-
-/* Colores según el valor del total */
-.equipos-container .total.verde   { color: #155724; background-color: #d4edda; }
-.equipos-container .total.naranja { color: #856404; background-color: #fff3cd; }
-.equipos-container .total.rojo    { color: #721c24; background-color: #f8d7da; }
-
-/* Borde lateral de la tarjeta según el total */
-.equipos-container .equipo .total.verde   { border-left-color: #28a745; }
-.equipos-container .equipo .total.naranja { border-left-color: #ff9800; }
-.equipos-container .equipo .total.rojo    { border-left-color: #d32f2f; }
-
-/* Responsive */
-@media (max-width: 900px) {
-    .equipos-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .equipos-container {
-        grid-template-columns: 1fr;
-    }
-}
+/*# sourceMappingURL=estilos.css.map */

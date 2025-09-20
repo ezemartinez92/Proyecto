@@ -1,0 +1,73 @@
+@use '../generales/variables' as color;
+
+.equipos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px;
+  
+    .equipo {
+      background: linear-gradient(180deg, #c5c7c5 0%, #f2f6fc 100%);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease; 
+      border-left: 8px solid transparent;
+  
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+  
+      > strong {
+        display: block;
+        color: color.$color-nombreEquipo;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+        border-bottom: 1px solid #d1e3f0;
+        padding-bottom: 6px;
+        text-align: center;
+      }
+  
+      ul {
+        li {
+          margin-bottom: 8px;
+          font-size: 1rem;
+          line-height: 1.5;
+          list-style: none;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+  
+      .total {
+        font-weight: bold;
+        font-size: 1.15rem;
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 6px;
+        text-align: center;
+  
+        &.verde {
+          color: color.$mejores-equipos;
+          background-color:color.$mejores-background-color;
+          border-left-color: color.$mejores-border-left-color;
+        }
+  
+        &.naranja {
+          color: color.$normales-equipos;
+          background-color: color.$normales-background-color;
+          border-left-color: color.$normales-border-left-color;
+        }
+  
+        &.rojo {
+          color: color.$peores-equipos;
+          background-color: color.$peores-background-color;
+          border-left-color: color.$peores-border-left-color;
+        }
+      }
+    }
+  }
+  
