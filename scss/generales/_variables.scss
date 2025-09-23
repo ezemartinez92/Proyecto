@@ -32,6 +32,7 @@ $titulo-principal-font-size: 2rem;
 $titulo-principal-margin-bottom: 20px;
 $titulo-principal-text-align: center;
 $titulo-principal-margin-top: 0;
+$titulo-principal-font-family: 'Open Sans', sans-serif;
 
 $menu-bg: #003366;
 $menu-hover-color: #ffd700;
@@ -39,3 +40,10 @@ $menu-hover-bg: rgba(255, 255, 255, 0.1);
 $menu-border-radius: 0.5rem;
 $menu-item-radius: 5px;
 $menu-box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+
+$body-font-family: Arial, Helvetica, sans-serif;
+$body-line-height: 1.6;
+$body-background: linear-gradient(135deg, #f0f2f3, #d4d9de, #aab6c0);
+$body-min-height: 100vh;
+$body-color: #333;
+$body-padding-top: 70px;

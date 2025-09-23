@@ -15,6 +15,7 @@
   text-align: variables.$titulo-principal-text-align;
   margin-bottom: variables.$titulo-principal-margin-bottom;
   margin-top: variables.$titulo-principal-margin-top;
+  font-family: variables.$titulo-principal-font-family;
   
 }
 
@@ -56,6 +57,13 @@
 
 // Estilos Header y Barra de Navegación
 header {
+  position: fixed;   // Fija el header en la parte superior
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;     // Por encima de otros elementos
+  background-color: #003; // Mantén el color de fondo (o usa tu variable)
+
   nav {
     ul {
       list-style: none;
@@ -80,9 +88,9 @@ header {
     }
 
     .nav-link {
-      color: white;                 
-      text-decoration: none;          
-      padding: 0.25rem 0.5rem;      
+      color: white;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
       transition: background-color 0.3s, color 0.3s;
 
@@ -93,7 +101,19 @@ header {
     }
   }
 }
+//----------------------------------------------------------------------
 
+// Ajuste del body para que el contenido no quede tapado por el header
+body {
+  font-family: variables.$body-font-family;
+  line-height: variables.$body-line-height;
+  background: variables.$body-background;
+  min-height: variables.$body-min-height;
+  color:variables.$body-color;
+  padding-top: variables.$body-padding-top;
+}
+
+//Colores de fondo y texto globales
 .bg-blue {
   background-color: variables.$header-bg-color;
   color: variables.$header-text-color;
@@ -120,6 +140,7 @@ header {
   }
 
 //Otros estilos globales
+
 .offcanvas-backdrop {
    background-color: rgba(0, 0, 0, 0.5);
  }
@@ -146,10 +167,8 @@ header {
   }
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
+.carousel-img {
+  max-height: 350px;
+  width: auto;
+  object-fit: contain;
 }
-

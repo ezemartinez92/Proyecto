@@ -11,6 +11,7 @@
   text-align: center;
   margin-bottom: 20px;
   margin-top: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 #menuSlide {
@@ -44,6 +45,14 @@
   border-radius: 5px;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #003;
+}
 header nav ul {
   list-style: none;
   display: flex;
@@ -71,6 +80,15 @@ header nav .nav-link {
 header nav .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f0f2f3, #d4d9de, #aab6c0);
+  min-height: 100vh;
+  color: #333;
+  padding-top: 70px;
 }
 
 .bg-blue {
@@ -117,11 +135,10 @@ main section p {
   margin: auto;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
+.carousel-img {
+  max-height: 350px;
+  width: auto;
+  object-fit: contain;
 }
 
 .equipos-container {
@@ -159,6 +176,7 @@ body {
   line-height: 1.5;
   list-style: none;
   text-align: center;
+  transform: translateX(-12px);
   font-weight: bold;
 }
 .equipos-container .equipo .total {
