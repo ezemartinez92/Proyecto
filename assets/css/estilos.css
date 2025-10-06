@@ -412,6 +412,15 @@ h2 {
     font-size: 2rem;
     margin-top: -2%;
   }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
+  }
   .card .row.g-0 {
     flex-direction: column;
   }
@@ -434,6 +443,9 @@ h2 {
   .equipo-foto img {
     object-fit: cover;
     object-position: center;
+  }
+  main {
+    flex: 1; /* empuja el footer hacia abajo */
   }
   main {
     padding: 40px 20px;

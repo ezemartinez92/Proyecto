@@ -51,6 +51,17 @@
     font-size: 2rem;
     margin-top: -2%;
   }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
+  }
   .card .row.g-0 {
     flex-direction: column;
   }
@@ -73,6 +84,10 @@
   .equipo-foto img {
     object-fit: cover;
     object-position: center;
+  }
+
+  main {
+    flex: 1; /* empuja el footer hacia abajo */
   }
    
   //Ajustes para moviles, main y sections
