@@ -2,164 +2,205 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Equipos</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Iconos para linkedin -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Estilos mios -->
-    <link rel="stylesheet" href="../assets/css/estilos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Equipos - ArgenPolo</title>
+  <meta name ="description" content= "Página de Equipos de ArgenPolo, el sitio dedicado al polo argentino.">
+  <meta name="keywords" content="Polo, Argentina, Contacto, Equipos, Torneos, Noticias">
+  <meta name="author" content="Ezequiel Martínez Morelli">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Iconos para linkedin -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Awesome para el logo -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Estilops mios -->
+  <link rel="stylesheet" href="../assets/css/estilos.css" />
 </head>
-
+<!---------------------------------------------------------------------------------------------------------------------->
 <body>
-    <header class="bg-blue py-2">
-        <nav class="container d-flex align-items-center justify-content-between">
-          <!-- Botón hamburguesa (siempre visible) -->
-          <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
-            <i class="bi bi-list" style="font-size: 2rem;"></i>
-          </button>
-      
-          <!-- Menú Principal -->
-          <ul class="nav d-none d-lg-flex justify-content-center flex-grow-1">
-            <li class="nav-item mx-3"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
-            <li class="nav-item mx-3"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
-            <li class="nav-item mx-3"><a href="torneos.html" class="nav-link text-white">Torneos</a></li>
-            <li class="nav-item mx-3"><a href="noticias.html" class="nav-link text-white">Noticias</a></li>
-            <li class="nav-item mx-3"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
+  <header class="bg-blue py-2">
+    <nav class="container d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <span class="d-block d-lg-none text-white fw-bold fs-4 position-absolute top-50 start-50 translate-middle">
+        <i class="fas fa-horse-head"></i> ArgenPolo
+      </span>
+
+      <!-- Botón -->
+      <button class="btn btn-outline-light d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#menuSlide" aria-controls="menuSlide">
+        <i class="bi bi-list" style="font-size: 2rem;"></i>
+      </button>
+
+      <!-- Menú Principal -->
+      <ul class="nav d-none d-lg-flex justify-content-center flex-grow-1">
+        <li class="nav-item mx-3"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+        <li class="nav-item mx-3"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
+        <li class="nav-item mx-3"><a href="torneos.html" class="nav-link text-white">Torneos</a></li>
+        <li class="nav-item mx-3"><a href="noticias.html" class="nav-link text-white">Noticias</a></li>
+        <li class="nav-item mx-3"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
+      </ul>
+
+      <!-- Menú Offcanvas -->
+      <div class="offcanvas offcanvas-start text-white bg-blue" data-bs-scroll="true" tabindex="-1" id="menuSlide"
+        aria-labelledby="menuSlideLabel" style="top: 60px; height: calc(100% - 60px);">
+        <div class="offcanvas-body d-flex flex-column justify-content-start p-2 pt-0">
+          <ul class="nav flex-column text-center slide-links">
+            <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white py-2">Inicio</a></li>
+            <li class="nav-item mb-2"><a href="equipos.html" class="nav-link text-white py-2">Equipos</a></li>
+            <li class="nav-item mb-2"><a href="torneos.html" class="nav-link text-white py-2">Torneos</a></li>
+            <li class="nav-item mb-2"><a href="noticias.html" class="nav-link text-white py-2">Noticias</a></li>
+            <li class="nav-item mb-2"><a href="contacto.html" class="nav-link text-white py-2">Contacto</a></li>
           </ul>
-      
-          <!-- Menú Offcanvas -->
-          <div class="offcanvas offcanvas-start text-white bg-blue" data-bs-scroll="true" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel">
-            <div class="offcanvas-header border-0">
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-            </div>
-            <div class="offcanvas-body d-flex flex-column justify-content-start p-2 pt-0">
-              <ul class="nav flex-column text-center mt-2">
-                <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white py-2">Inicio</a></li>
-                <li class="nav-item mb-2"><a href="equipos.html" class="nav-link text-white py-2">Equipos</a></li>
-                <li class="nav-item mb-2"><a href="torneos.html" class="nav-link text-white py-2">Torneos</a></li>
-                <li class="nav-item mb-2"><a href="noticias.html" class="nav-link text-white py-2">Noticias</a></li>
-                <li class="nav-item mb-2"><a href="contacto.html" class="nav-link text-white py-2">Contacto</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!---------------------------------------------------------------------------------------------------------------------->
+<main class="container mt-1 mb-5">
+  <h1 class="text-center titulo-principal mb-4">Equipos de la Triple Corona</h1>
+    <p class="text-center intro-text mb-3 px-3">Conocé a los principales equipos que compiten en la Triple Corona del polo argentino.</p>
+    <section class="cards-equipos">
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>LA NATIVIDAD-LA DOLFINA</h2>
+          <ul>
+            <li>Adolfo Cambiaso (H) 10</li>
+            <li>Camilo Castagnola 10</li>
+            <li>Adolfo Cambiaso (N) 10</li>
+            <li>Bartolomé Castagnola (H) 10</li>
+            <li><strong class="total verde">Total 40</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/01.webp" alt="La Natividad - La Dolfina">
+        </div>
+      </div>
 
-    <main>
-        <h1 class="text-center mb-4 titulo-principal">
-           Equipos de la Triple Corona
-          </h1>
-        <section>
-            <p>En esta sección encontrarás información sobre los principales equipos que participan en los torneos de la Triple Corona de polo.</p>
-        </section>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>LA IRENITA-LA HACHE</h2>
+          <ul>
+            <li>Hilario Ulloa 9</li>
+            <li>Francisco Elizalde 9</li>
+            <li>Pablo Mac Donough 10</li>
+            <li>Ignatius Du Plessis 9</li>
+            <li><strong class="total naranja">Total 37</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/02.webp" alt="La Irenita">
+        </div>
+      </div>
 
-        <section>
-            <div class="equipos-container">
-                <div class="equipo">
-                    <strong>LA NATIVIDAD-LA DOLFINA</strong>
-                    <ul>
-                        <li>Adolfo Cambiaso (H) 10</li>
-                        <li>Camilo Castagnola 10</li>
-                        <li>Adolfo Cambiaso (N) 10</li>
-                        <li>Bartolomé Castagnola (H) 10</li>
-                        <li><strong class="total verde">Total 40</strong></li>
-                    </ul>
-                </div>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>UAE</h2>
+          <ul>
+            <li>Pablo Pieres 9</li>
+            <li>Lucas Monteverde (N) 9</li>
+            <li>Tomás Panelo 9</li>
+            <li>Juan Martín Nero 10</li>
+            <li><strong class="total naranja">Total 37</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/03.webp" alt="UAE Polo Team">
+        </div>
+      </div>
 
-                <div class="equipo">
-                    <strong>LA IRENITA-LA HACHE</strong>
-                    <ul>
-                        <li>Hilario Ulloa 9</li>
-                        <li>Francisco Elizalde 9</li>
-                        <li>Pablo Mac Donough 10</li>
-                        <li>Ignatius Du Plessis 9</li>
-                        <li><strong class="total naranja">Total 37</strong></li>
-                    </ul>
-                </div>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>ELLERSTINA</h2>
+          <ul>
+            <li>Facundo Pieres 10</li>
+            <li>Gonzalo Pieres (H) 9</li>
+            <li>Cruz Heguy 9</li>
+            <li>Antonio Heguy 8</li>
+            <li><strong class="total naranja">Total 36</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/04.webp" alt="Ellerstina Polo">
+        </div>
+      </div>
 
-                <div class="equipo">
-                    <strong>UAE</strong>
-                    <ul>
-                        <li>Pablo Pieres 9</li>
-                        <li>Lucas Monteverde (N) 9</li>
-                        <li>Tomás Panelo 9</li>
-                        <li>Juan Martín Nero 10</li>
-                        <li><strong class="total naranja">Total 37</strong></li>
-                    </ul>
-                </div>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>LA ENSENADA</h2>
+          <ul>
+            <li>Rufino Bensadon 8</li>
+            <li>Guillermo Caset (H) 9</li>
+            <li>Juan Britos (H) 8</li>
+            <li>Jeronimo Del Carril 9</li>
+            <li><strong class="total rojo">Total 34</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/05.webp" alt="La Ensenada">
+        </div>
+      </div>
 
-                <div class="equipo">
-                    <strong>ELLERSTINA</strong>
-                    <ul>
-                        <li>Facundo Pieres 10</li>
-                        <li>Gonzalo Pieres (H) 9</li>
-                        <li>Cruz Heguy 9</li>
-                        <li>Antonio Heguy 8</li>
-                        <li><strong class="total naranja">Total 36</strong></li>
-                    </ul>
-                </div>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>LA HACHE CRIA Y POLO</h2>
+          <ul>
+            <li>Bautista Bayugar 8</li>
+            <li>Carlos M. Ulloa 8</li>
+            <li>Joaquin Pittaluga 8</li>
+            <li>Ignacio Laprida 8</li>
+            <li><strong class="total rojo">Total 32</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/06.webp" alt="La Hache Cría y Polo">
+        </div>
+      </div>
 
-                <div class="equipo">
-                    <strong>LA ENSENADA</strong>
-                    <ul>
-                        <li>Rufino Bensadon 8</li>
-                        <li>Guillermo Caset (H) 9</li>
-                        <li>Juan Britos (H) 8</li>
-                        <li>Jeronimo Del Carril 9</li>
-                        <li><strong class="total rojo">Total 34</strong></li>
-                    </ul>
-                </div>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>LOS MACHITOS</h2>
+          <ul>
+            <li>Victorino Ruiz Jorba 8</li>
+            <li>Alfredo Bigatti 8</li>
+            <li>Diego Cavanagh 8</li>
+            <li>Teodoro Lacau 8</li>
+            <li><strong class="total rojo">Total 32</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/07.webp" alt="Los Machitos">
+        </div>
+      </div>
 
-                <div class="equipo">
-                    <strong>LA HACHE CRIA Y POLO</strong>
-                    <ul>
-                        <li>Bautista Bayugar 8</li>
-                        <li>Carlos M. Ulloa 8</li>
-                        <li>Joaquin Pittaluga 8</li>
-                        <li>Ignacio Laprida 8</li>
-                        <li><strong class="total rojo">Total 32</strong></li>
-                    </ul>
-                </div>
+      <div class="card-equipo">
+        <div class="equipo-info">
+          <h2>SOL DE AGOSTO</h2>
+          <ul>
+            <li>Facundo Sola 8</li>
+            <li>Benjamín Panelo 8</li>
+            <li>Juan Martín Zubia 9</li>
+            <li>Paco De Narváez 7</li>
+            <li><strong class="total rojo">Total 32</strong></li>
+          </ul>
+        </div>
+        <div class="equipo-foto">
+          <img src="../assets/img/equipos/08.webp" alt="Sol de Agosto">
+        </div>
+      </div>
 
-                <div class="equipo">
-                    <strong>LOS MACHITOS</strong>
-                    <ul>
-                        <li>Victorino Ruiz Jorba 8</li>
-                        <li>Alfredo Bigatti 8</li>
-                        <li>Diego Cavanagh 8</li>
-                        <li>Teodoro Lacau 8</li>
-                        <li><strong class="total rojo">Total 32</strong></li>
-                    </ul>
-                </div>
-
-                <div class="equipo">
-                    <strong>SOL DE AGOSTO</strong>
-                    <ul>
-                        <li>Facundo Sola 8</li>
-                        <li>Benjamín Panelo 8</li>
-                        <li>Juan Martín Zubia 9</li>
-                        <li>Paco De Narváez 7</li>
-                        <li><strong class="total rojo">Total 32</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Empieza el footer -->
-    <footer class="bg-blue text-white text-center py-3 mt-5">
-      <p class="mb-0">
-      &copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.
-      <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
+    </section>
+  </main>
+<!---------------------------------------------------------------------------------------------------------------------->
+<footer class="bg-blue text-white text-center py-3 mt-5">
+  <p class="mb-0">
+    &copy; 2025 Triple Corona - Polo Argentino.
+    <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
       <i class="bi bi-linkedin" style="font-size: 1.5rem; vertical-align: middle;"></i>
-      </a>
-      </p>
-    </footer><!-- Termina el footer -->
-  
-  <!-- Bootstrap JS -->
+    </a>
+    </p>
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

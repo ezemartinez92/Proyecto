@@ -1,10 +1,15 @@
 @use 'variables' as variables;
-
 //Reset CSS
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+//Colores de fondo y texto globales
+.bg-blue {
+  background-color: variables.$header-bg-color;
+  color: variables.$header-text-color;
 }
 
 //Estilos Titulo Principal
@@ -16,53 +21,32 @@
   margin-bottom: variables.$titulo-principal-margin-bottom;
   margin-top: variables.$titulo-principal-margin-top;
   font-family: variables.$titulo-principal-font-family;
-  
 }
 
-//Estilos Menu Slide	
-#menuSlide {
-  width: 250px;
-  max-height: 70vh;
-  top: 15vh;
-  border-radius: variables.$menu-border-radius;
-  height: auto;
-  background-color: variables.$menu-bg;
-  padding: 0;
-  box-shadow: variables.$menu-box-shadow;
-
-  .offcanvas-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 1rem;
-  }
-
-  .nav-item {
-    margin-bottom: 0.5rem;
-  }
-
-  .nav-link {
-    color: white !important;
-    text-decoration: none;
-    font-weight: 500;
-
-    &:hover {
-      color: variables.$menu-hover-color;
-      background-color: variables.$menu-hover-bg;
-      transform: scale(1.05);
-      border-radius: variables.$menu-item-radius;
-    }
-  }
+//Mis P
+.intro-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #252525;
+  max-width: 800px;
+  margin: 0 auto 2rem auto; 
 }
 
-// Estilos Header y Barra de Navegación
+//Mis Cards
+.card{
+  background: rgb(238, 238, 241) !important;
+}
+
+// Estilos para Header y Menú Desktop
 header {
-  position: fixed;   // Fija el header en la parte superior
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1030;     // Por encima de otros elementos
-  background-color: #003; // Mantén el color de fondo (o usa tu variable)
+  z-index: 1030;
+  background-color: #003;
 
   nav {
     ul {
@@ -101,9 +85,38 @@ header {
     }
   }
 }
-//----------------------------------------------------------------------
 
-// Ajuste del body para que el contenido no quede tapado por el header
+//Estilos del Menú Mobile
+.offcanvas {
+  transition: transform 0.5s ease-in-out;
+
+  &-start {
+    width: 102% !important;
+    max-width: 102% !important;
+  }
+
+  &-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+#menuSlide {
+  top: 77px !important;
+
+  .slide-links {
+    margin-top: 40px;
+
+    .nav-link {
+      font-size: 2rem;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      position: relative;
+    }
+  }
+}
+
 body {
   font-family: variables.$body-font-family;
   line-height: variables.$body-line-height;
@@ -111,64 +124,4 @@ body {
   min-height: variables.$body-min-height;
   color:variables.$body-color;
   padding-top: variables.$body-padding-top;
-}
-
-//Colores de fondo y texto globales
-.bg-blue {
-  background-color: variables.$header-bg-color;
-  color: variables.$header-text-color;
-}
-
-//Medias Queries
-@media (max-width: 900px) {
-  .equipos-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .equipos-container {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 768px) {
-    #menuSlide {
-      width: 90%;      
-      height: 90%;     
-      top: 5%;       
-      border-radius: 0;
-    }
-  }
-
-//Otros estilos globales
-
-.offcanvas-backdrop {
-   background-color: rgba(0, 0, 0, 0.5);
- }
-
- main {
-  padding: 40px 20px;
-  text-align: center;
-
-  section {
-    &:nth-of-type(1) {
-      margin-top: 1px;
-      margin-bottom: 20px;
-    }
-
-    &:nth-of-type(2) {
-      margin-top: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
-    }
-  }
-}
-
-.carousel-img {
-  max-height: 350px;
-  width: auto;
-  object-fit: contain;
 }

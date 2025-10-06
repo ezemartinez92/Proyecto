@@ -4,23 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contacto - ArgenPolo</title>
+    <meta name ="description" content= "Página de contacto de ArgenPolo, el sitio dedicado al polo argentino.">
+    <meta name="keywords" content="Polo, Argentina, Contacto, Equipos, Torneos, Noticias">
+    <meta name="author" content="Ezequiel Martínez Morelli">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Iconos para linkedin -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Awesome para el logo -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Estilops mios -->
     <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
-
+<!---------------------------------------------------------------------------------------------------------------------->
 <body>
   <header class="bg-blue py-2">
     <nav class="container d-flex align-items-center justify-content-between">
-      <!-- Botón hamburguesa (siempre visible) -->
-      <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
-        <i class="bi bi-list" style="font-size: 2rem;"></i>
+      <!-- Logo -->
+      <span class="d-block d-lg-none text-white fw-bold fs-4 position-absolute top-50 start-50 translate-middle">
+        <i class="fas fa-horse-head"></i> ArgenPolo
+      </span>
+      <!-- Botón -->
+      <button class="btn btn-outline-light d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
+      <i class="bi bi-list" style="font-size: 2rem;"></i>
       </button>
-  
+
      <!-- Menú Principal -->
       <ul class="nav d-none d-lg-flex justify-content-center flex-grow-1">
         <li class="nav-item mx-3"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
@@ -30,13 +39,12 @@
         <li class="nav-item mx-3"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
       </ul>
   
-      <!-- Menú Offcanvas -->
-      <div class="offcanvas offcanvas-start text-white bg-blue" data-bs-scroll="true" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel">
-        <div class="offcanvas-header border-0">
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    <!-- Menú Offcanvas -->
+      <div class="offcanvas offcanvas-start text-white bg-blue" data-bs-scroll="true" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel"style="top: 60px; height: calc(100% - 60px);">
+        <div class="offcanvas-header border-0">   
         </div>
         <div class="offcanvas-body d-flex flex-column justify-content-start p-2 pt-0">
-          <ul class="nav flex-column text-center mt-2">
+          <ul class="nav flex-column text-center slide-links">
             <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white py-2">Inicio</a></li>
             <li class="nav-item mb-2"><a href="equipos.html" class="nav-link text-white py-2">Equipos</a></li>
             <li class="nav-item mb-2"><a href="torneos.html" class="nav-link text-white py-2">Torneos</a></li>
@@ -47,48 +55,43 @@
       </div>
     </nav>
   </header>
-
-    <main>
-      <h1 class="text-center mb-4 titulo-principal">
-       Contacto
-      </h1>
-        <p>Por cualquier consulta, completa el formulario:</p>
-
+<!---------------------------------------------------------------------------------------------------------------------->
+  <main class=" container mt-1 mb-9">
+    <h1 class="text-center mb-4 titulo-principal"> Contacto </h1>
+      <p class="intro-text">Por cualquier consulta, completa el formulario:</p>
         <!-- Voy creando mi formulario. -->
         <form action="#" method="post" class="form-contacto">
-            <div class="campo">
-                <label for="nombre">Nombre completo:</label>
-                <!-- Obligatorio -->
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-            </div>
+        <div class="campo">
+          <label for="nombre">Nombre completo:</label>
+          <!-- Obligatorio -->
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+        </div>
 
-            <div class="campo">
-                <label for="email">Mail:</label>
-                <!-- Obligatorio -->
-                <input type="email" id="email" name="email" placeholder="Ej: ejemplo@correo.com" required>
-            </div>
+        <div class="campo">
+          <label for="email">Mail:</label>
+          <!-- Obligatorio -->
+          <input type="email" id="email" name="email" placeholder="Ej: ejemplo@correo.com" required>
+        </div>
 
-            <div class="campo">
-                <label for="mensaje">Mensaje:</label>
-                <!-- Obligatorio -->
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
-            </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje:</label>
+          <!-- Obligatorio -->
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+        </div>
 
-            <button type="submit" class="btn-enviar">Enviar</button>
+        <button type="submit" class="btn-enviar">Enviar</button>
         </form>
     </main>
-
-  <!-- Empieza el footer -->
-  <footer class="bg-blue text-white text-center py-3 mt-5">
-    <p class="mb-0">
-      &copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.
-      <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
-        <i class="bi bi-linkedin" style="font-size: 1.5rem; vertical-align: middle;"></i>
-      </a>
+<!---------------------------------------------------------------------------------------------------------------------->
+<footer class="bg-blue text-white text-center py-3 mt-5">
+  <p class="mb-0">
+    &copy; 2025 Triple Corona - Polo Argentino.
+    <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
+      <i class="bi bi-linkedin" style="font-size: 1.5rem; vertical-align: middle;"></i>
+    </a>
     </p>
-  </footer><!-- Termina el footer -->
-  
-  <!-- Bootstrap JS -->
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

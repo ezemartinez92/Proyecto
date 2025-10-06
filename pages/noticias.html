@@ -2,27 +2,36 @@
 <html lang="es">
     
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Noticias</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Iconos para linkedin -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Estilos míos -->
-    <link rel="stylesheet" href="../assets/css/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noticias - ArgenPolo</title>
+  <meta name ="description" content= "Página de Noticias de ArgenPolo, el sitio dedicado al polo argentino.">
+  <meta name="keywords" content="Polo, Argentina, Contacto, Equipos, Torneos, Noticias">
+  <meta name="author" content="Ezequiel Martínez Morelli">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Iconos para linkedin -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Awesome para el logo -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Estilos míos -->
+  <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
-
+<!---------------------------------------------------------------------------------------------------------------------->
 <body>
-  
   <header class="bg-blue py-2">
     <nav class="container d-flex align-items-center justify-content-between">
-      <!-- Botón hamburguesa (siempre visible) -->
-      <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
+      <!-- Logo -->
+      <span class="d-block d-lg-none text-white fw-bold fs-4 position-absolute top-50 start-50 translate-middle">
+       <i class="fas fa-horse-head"></i> ArgenPolo
+      </span>
+
+      <!-- Botón -->
+      <button class="btn btn-outline-light d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSlide" aria-controls="menuSlide">
         <i class="bi bi-list" style="font-size: 2rem;"></i>
       </button>
   
-      <!-- Navbar horizontal (solo escritorio), centrado -->
+      <!-- Menú Principal -->
       <ul class="nav d-none d-lg-flex justify-content-center flex-grow-1">
         <li class="nav-item mx-3"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
         <li class="nav-item mx-3"><a href="equipos.html" class="nav-link text-white">Equipos</a></li>
@@ -32,12 +41,12 @@
       </ul>
   
       <!-- Menú Offcanvas -->
-      <div class="offcanvas offcanvas-start text-white bg-blue" data-bs-scroll="true" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel">
+      <div class="offcanvas offcanvas-start text-white bg-blue" data-bs-scroll="true" tabindex="-1" id="menuSlide" aria-labelledby="menuSlideLabel"style="top: 60px; height: calc(100% - 60px);">
         <div class="offcanvas-header border-0">
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      
         </div>
         <div class="offcanvas-body d-flex flex-column justify-content-start p-2 pt-0">
-          <ul class="nav flex-column text-center mt-2">
+          <ul class="nav flex-column text-center slide-links">
             <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white py-2">Inicio</a></li>
             <li class="nav-item mb-2"><a href="equipos.html" class="nav-link text-white py-2">Equipos</a></li>
             <li class="nav-item mb-2"><a href="torneos.html" class="nav-link text-white py-2">Torneos</a></li>
@@ -48,21 +57,17 @@
       </div>
     </nav>
   </header>
-
-
-  <main>
-    <h1 class="text-center mb-4 titulo-principal">
-     Videos y Fixture
-    </h1>
+<!---------------------------------------------------------------------------------------------------------------------->
+<main class=" container mt-1 mb-5">
+  <h1 class="text-center mb-4 titulo-principal">Videos y Fixture</h1>
     <section>   
-      <p>
+      <p class="intro-text">
           En esta sección encontrarás videos destacados de los torneos de la Triple Corona y Fixture de Partidos.
       </p>
-  </section>
+    </section>
     <!-- Aca Inserto los videos de Youtube-->
     <section class="container">
-      <div class="row g-4">
-        
+      <div class="row g-4">  
         <!-- Noticia 1 -->
         <div class="col-md-4">
           <div class="card no-hover">
@@ -78,7 +83,6 @@
             </div>
           </div>
         </div>
-  
         <!-- Noticia 2 -->
         <div class="col-md-4">
           <div class="card no-hover">
@@ -94,7 +98,6 @@
             </div>
           </div>
         </div>
-  
         <!-- Noticia 3 -->
         <div class="col-md-4">
           <div class="card no-hover">
@@ -110,9 +113,8 @@
             </div>
           </div>
         </div>
-
-     <!-- Noticia 4 (Fixture) -->
-      <div class="col-md-4">
+        <!-- Fixture Tortugas -->
+        <div class="col-md-4">
         <div class="card border-primary shadow-sm bg-light">
           <div class="card-body">
             <h5 class="card-title fw-bold text-primary mb-3">
@@ -130,9 +132,7 @@
           </div>
         </div>
       </div>
-
-
-      <!-- Noticia 5 (Fixture) -->
+      <!-- Fixture Hurlingham -->
       <div class="col-md-4">
         <div class="card border-primary shadow-sm bg-light">
           <div class="card-body">
@@ -150,8 +150,7 @@
           </div>
         </div>
       </div>
-
-      <!-- Noticia 6 (Fixture) -->
+      <!-- Fixture Palermo -->
       <div class="col-md-4">
         <div class="card border-primary shadow-sm bg-light">
           <div class="card-body">
@@ -173,7 +172,6 @@
               <li class="list-group-item">🏆 <strong>Finales de Zona:</strong> Sábado 29/11 - 14:00hs y 16:30hs</li>
               <li class="list-group-item">🏆<strong>Finales de Zona:</strong> Domingo 30/11 - 14:00hs y 16:30hs</li>
               <li class="list-group-item text-danger fw-bold">🥇 <strong>Final:</strong> Sábado 06/12 - 16:00hs</li>
-
             </ul>
           </div>
         </div>
@@ -181,18 +179,16 @@
       </div>
     </section>
   </main>
+<!---------------------------------------------------------------------------------------------------------------------->
+<footer class="bg-blue text-white text-center py-3 mt-5">
+  <p class="mb-0">
+    &copy; 2025 Triple Corona - Polo Argentino.
+    <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
+      <i class="bi bi-linkedin" style="font-size: 1.5rem; vertical-align: middle;"></i>
+    </a>
+    </p>
+</footer>
 
-    <!-- Empieza el footer -->
-    <footer class="bg-blue text-white text-center py-3 mt-5">
-      <p class="mb-0">
-        &copy; 2025 Triple Corona - Polo Argentino. Todos los derechos reservados.
-        <a href="https://www.linkedin.com/in/ezemartinez92" target="_blank" class="text-white ms-2">
-          <i class="bi bi-linkedin" style="font-size: 1.5rem; vertical-align: middle;"></i>
-        </a>
-      </p>
-    </footer><!-- Termina el footer -->
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
